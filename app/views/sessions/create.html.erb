@@ -1,0 +1,66 @@
+<div class='main-header'>
+	<div classs='row no-pad-mar'>
+		<div class='col-lg-1 pull-right text-right'>
+		<%= link_to "Sign Out", signout_path %>
+		</div>
+		<div class='col-lg-4 pull-right text-right'>
+			<img src="<%= @tweets[0].user.profile_image_url %>" title='<%= @current_user.name %>' class='usr_img_bubble_small'>
+		</div>
+	</div>
+</div>
+<div class='profile_cover_container'>
+	<img src="<%= @tweets[0].user.profile_banner_url %>">
+</div>
+<div class='Prof_Pic_Row'>
+	<div class='profile_picture'>
+		<img src='<%= @tweets[0].user.profile_image_url %>' class='usr_img_bubble'>
+		<div class='text-center FullName'><%= @current_user.name %></div>
+		<div class='text-center UserName'>@<%= @current_user.username %></div>
+	</div>
+	<div class='interim_nav_header'>
+		<div class='row'>
+			<div class='col-xs-1'>
+				Tweets
+				<br/><b>7</b>
+			</div>
+		</div>
+	</div>
+</div>
+<div class='tweetsRow'>
+	<div class='row no-pad-mar'>
+		<div class='col-lg-3'></div>
+		<div class='col-lg-6'>
+			<div class='tweetsHeader'>
+				<div class='row'>
+					<div class='col-xs-2 text-center tweetHeadAnc'>Tweets</div>
+					<div class='col-xs-3 text-center tweetHeadAnc'>Tweets & Replies</div>
+				</div>
+			</div>
+			<% @tweets.each do |item|%>
+			<div class='tweet-strip'>
+				<div class='tweet-status'><span class='fa fa-refresh'></span> &nbsp;&nbsp;
+					<span class='smalltext'><%= item.user.name %> retweeted</span>
+				</div>
+				<div class='row'>
+					<div class='col-lg-2 text-center'>
+						<img src="<%= item.retweeted_status.user.profile_image_url%>" class='usr_img_bubble'>
+					</div>
+					<div class='col-lg-9'>
+						<div class='tweet_real_author'>
+							<b>
+								<%= item.retweeted_status.user.name %>
+							</b>&nbsp;&nbsp;&nbsp;
+							<span class='smalltext'>@<%= item.retweeted_status.user.screen_name %></span>
+							</b>&nbsp;&nbsp;&nbsp;
+							</b>&nbsp;&nbsp;&nbsp;
+							<span class='smallTime'><%= item.retweeted_status.created_at %></span>
+						</div>
+						<%= item.text  %>
+					</div>
+				</div>
+			</div>
+			<% end %>
+
+		</div>
+	</div>
+</div>

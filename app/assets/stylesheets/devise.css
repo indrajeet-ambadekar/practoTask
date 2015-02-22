@@ -1,0 +1,77 @@
+
+.signin{
+	background-color: white;
+	border: 2px solid #44433C;
+	border-radius: 5px;
+	margin-top: 40px;
+	padding-top: 10px;
+}
+.reg-head{
+	font-size:24px;
+	text-align: center;
+	padding-bottom: 15px;
+}
+.reg-foot{
+	text-align: right;
+}
+.reg-head .globe{
+	font-size: 30px;
+}
+.reg-input{
+	border-radius: 5px;
+	border: 2px solid #7B4D36;
+	background-color: #C2C2C2;
+	padding-top: 10px;
+	margin-bottom: 5px;
+}
+.reg-box input{
+	border:	2px solid 	#7B4D36 !important;
+	border-radius: 5px;
+	font-style: italic;
+	padding:6px 6px 6px 6px;
+	background-color: #F0F0F0;
+	margin-bottom: 10px;
+	margin-right:-5px; 
+	font-size: 17px;
+	width: 90%;
+}
+.reg-box input:focus{
+	text-decoration: none;
+	border:	2px solid 	#7B4D36 !important;
+}
+.ricon{
+	font-size: 30px;
+	padding-right: 20px;
+	margin-right: 5px; 
+}
+.sign-button{
+	background-color: #C2C2C2;
+	font-size: 18px;
+	border-color:#7B4D36; 
+}
+.shared-links{
+	padding-top: 5px;
+	padding-bottom: 10px;
+}
+.shared-links a{
+	font-size: 16px;
+	color:#000000;
+}
+@media screen and (max-width: 500px){
+	.ltab, .rtab{
+		display: none !important;
+	}
+	.reg-box input{
+		font-size: 15px;
+		padding-top: 2px;
+		margin-bottom: 2px;
+	}
+	.ricon{
+		font-size:22px; 
+		padding-bottom: 5px;
+	}
+	.reg-input{
+		padding-top: 5px;
+		padding-bottom: 5px;
+	}
+}
