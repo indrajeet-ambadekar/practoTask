@@ -1,1 +1,20 @@
-Example Railscasts Application
+1. Fristly, install rails in your system. A quick googling will guide you with precise instructions to install rails inyou linux/Windows/Mac.
+
+2. Install phpmyadmin in your local server.
+
+3. Once you clone the repo onto your system, enter the repo folder from your terminal/cmd and the run "bundle install". This will install all dependencies['gems'] onto your local project.
+
+4. After installing all dependencies, we now need to set up or DB environment for the app.
+Run "rake db:create" & "rake db:migrate" to set up your DB and all its tables. after a successful migration of our DB schema, when you take a look at the phpmyadmin console, you will see a DB named "tweet_development" in your databases list and all its tables created and seeded.
+
+5. If the rake process gives any trouble, goto "config/database.yml" file and edit your phpmyadmin login username & password. Usually they are set to "root" & "root" respectively so a rails app is usually precomfigured for them. If you have any other credentials, update them in the file.
+
+6. now that we have set up our DB environment, Its time to run our project now. run "rails server -p [port_number]". for instance "rails server -p 4000". Your Rails app is up and running on "http://localhost:4000/" or "http://127.0.0.1:4000/" or "http://lvh.me:4000/"
+
+
+
+If you face any problem setting up rails or in running our rails app, "You can contact me at iambadekar@gmail.com" or you can contact me on the mobile number that you already have.
+
+Thanks
+
+Indrajeet Ambadekar
